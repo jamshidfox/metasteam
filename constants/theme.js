@@ -1,7 +1,7 @@
 /** @format */
 
 const dark = {
-  backgroundColor: "black",
+  backgroundColor: "#262139",
   color: "white",
   borderRadius: "8px",
   transition: "0.7s",

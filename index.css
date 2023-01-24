@@ -13,27 +13,34 @@ body {
   /* background-color: aqua; */
   width: 100%;
   height: 100vh;
-  background: url("images/background.png"), var(--violet);
+  background: url("images/background.png"), rgba(38, 33, 57, 0.2);
   background-size: contain;
 }
 .main {
   width: 100%;
   height: 100%;
 }
-nav {
-  width: 100%;
-  height: 60px;
+.nav {
+  width: fill;
   display: flex;
-  /* background-color: aquamarine; */
+  align-items: center;
+  justify-content: space-between;
+  height: 45px;
   background: transparent;
+  padding: 24px 120px;
 }
 .meta-text {
+  color: white;
   font-family: "Oswald", sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 56px;
 }
 .steam-text {
   color: var(--blue);
 }
 dropdown {
+  height: 20px;
   display: inline-block;
 }
 dropdown label,
@@ -90,49 +97,34 @@ dropdown input:checked ~ ul {
 .switch {
   position: relative;
   display: inline-block;
-  margin: 0 5px;
+  margin: 0 10px;
+  height: 60px;
 }
 
-.switch > span {
-  position: absolute;
-  top: 14px;
+.switch > img {
+  position: relative;
+  top: -48px;
+  left: 12px;
   pointer-events: none;
-  font-family: "Helvetica", Arial, sans-serif;
-  font-weight: bold;
-  font-size: 12px;
-  text-transform: uppercase;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
-  width: 50%;
-  text-align: center;
 }
-
+#sun-img {
+  top: -46px;
+  left: 26px;
+}
 input.check-toggle-round-flat:checked ~ .off {
-  color: #f36f25;
+  background: rgba(255, 255, 255, 0.1);
 }
 
 input.check-toggle-round-flat:checked ~ .on {
-  color: #fff;
+  color: var(--blue);
 }
 
 .switch > img {
   width: 32px;
 }
-.switch > span.on {
-  left: 0;
-  padding-left: 2px;
-  color: #f36f25;
-}
-
-.switch > span.off {
-  right: 0;
-  padding-right: 4px;
-  color: #fff;
-}
 
 .check-toggle {
-  position: absolute;
-  margin-left: -9999px;
-  visibility: hidden;
+  display: none;
 }
 .check-toggle + label {
   display: block;
@@ -144,12 +136,16 @@ input.check-toggle-round-flat:checked ~ .on {
   -ms-user-select: none;
   user-select: none;
 }
+.nav-controls {
+  display: flex;
+  align-items: center;
+}
 
 input.check-toggle-round-flat + label {
   padding: 2px;
-  width: 97px;
-  height: 35px;
-  background-color: #f36f25;
+  width: 104px;
+  height: 55px;
+  background: rgba(255, 255, 255, 0.1);
   -webkit-border-radius: 60px;
   -moz-border-radius: 60px;
   -ms-border-radius: 60px;
@@ -168,7 +164,7 @@ input.check-toggle-round-flat + label:before {
   left: 2px;
   bottom: 2px;
   right: 2px;
-  background-color: #f36f25;
+  background: rgba(255, 255, 255, 0.1);
   -webkit--moz-border-radius: 60px;
   -ms-border-radius: 60px;
   -o-border-radius: 60px;
@@ -178,13 +174,14 @@ input.check-toggle-round-flat + label:after {
   top: 4px;
   left: 4px;
   bottom: 4px;
-  width: 48px;
-  background-color: #fff;
+  width: 50px;
+  height: 50px;
+  background-color: var(--blue);
   -webkit-border-radius: 52px;
   -moz-border-radius: 52px;
   -ms-border-radius: 52px;
   -o-border-radius: 52px;
-  border-radius: 52px;
+  border-radius: 50px;
   -webkit-transition: margin 0.2s;
   -moz-transition: margin 0.2s;
   -o-transition: margin 0.2s;
@@ -195,5 +192,5 @@ input.check-toggle-round-flat:checked + label {
 }
 
 input.check-toggle-round-flat:checked + label:after {
-  margin-left: 44px;
+  margin-left: 50px;
 }
