@@ -97,14 +97,14 @@ dropdown input:checked ~ ul {
   -moz-backface-visibility: hidden; /* Firefox */
   -ms-backface-visibility: hidden; /* Internet Explorer */
 }
-.switch {
+#switch {
   position: relative;
   display: inline-block;
   margin: 0 10px;
   height: 60px;
 }
 
-.switch > img {
+#switch > img {
   position: relative;
   top: -48px;
   left: 12px;
@@ -122,7 +122,7 @@ input.check-toggle-round-flat:checked ~ .on {
   color: var(--blue);
 }
 
-.switch > img {
+#switch > img {
   width: 32px;
 }
 
