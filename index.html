@@ -7,13 +7,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="index.css" />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Oswald:wght@500&display=swap"
+      rel="stylesheet"
+    />
     <title>Meta Steam</title>
   </head>
   <body>
     <div class="main">
       <div class="nav">
-        <h3 class="meta-text">META<span class="steam-text">STEAM</span></h3>
+        <div class="meta-text">META<span class="steam-text">STEAM</span></div>
         <div class="nav-controls">
           <dropdown>
             <input id="toggle2" type="checkbox" />
@@ -38,15 +43,28 @@
       </div>
       <div class="section">
         <div class="left">
-          <div class="left-numbers">
-            <h5>19 241</h5>
-            <p>пополнений</p>
+          <div class="left-container">
+            <div class="left-numbers">
+              <div id="h5">19 241</div>
+              <div id="p">пополнений</div>
+            </div>
+            <div id="h2">Пополняйте баланс Steam вместе с нами</div>
+            <div id="p">Быстро и безопасно</div>
+            <div class="left-container-icons">
+              <iconify-icon icon="fa-brands:telegram-plane"></iconify-icon>
+              <iconify-icon icon="mdi:instagram"></iconify-icon>
+              <iconify-icon icon="uil:facebook"></iconify-icon>
+            </div>
           </div>
-          <h2>Пополняйте баланс Steam вместе с нами</h2>
         </div>
         <div class="right"></div>
       </div>
     </div>
+    <div class="blurs">
+      <div class="blur-1"></div>
+      <div class="blur-2"></div>
+    </div>
+    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
     <script src="./constants/theme.js"></script>
     <script src="./index.js"></script>
   </body>
