@@ -1,16 +1,19 @@
 /** @format */
-// import { dark, white } from "./constants/theme";
 const toggle = document.getElementById("toggleDark");
 const body = document.querySelector("body");
 
 toggle.addEventListener("click", () => {
   if (toggle.innerHTML == "dark") {
-    body.style.backgroundColor = "black";
-    body.style.transition = "0.7s";
+    //Body
+    body.style.backgroundColor = dark.backgroundColor;
+    body.style.transition = dark.transition;
     toggle.innerHTML = "light";
+    //***************
   } else {
-    body.style.backgroundColor = "white";
-    body.style.transition = "0.7s";
+    //Body
+    body.style.backgroundColor = light.backgroundColor;
+    body.style.transition = light.transition;
     toggle.innerHTML = "dark";
+    //***************
   }
 });
