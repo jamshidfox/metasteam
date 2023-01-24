@@ -16,14 +16,36 @@
     <title>Meta Steam</title>
   </head>
   <body>
-    <h1>Meta Steam</h1>
-    <button id="toggleDark">dark</button>
-    <script src="./index.js"></script>
     <div class="main">
+      <button id="toggleDark">dark</button>
       <nav>
-        <h1 class="meta-text">META<span class="steam-text">STEAM</span></h1>
+        <h3 class="meta-text">META<span class="steam-text">STEAM</span></h3>
+
+        <div>
+          <dropdown>
+            <input id="toggle2" type="checkbox" />
+            <label for="toggle2" class="animate"
+              >Русский<i class="fa fa-list float-right"></i
+            ></label>
+            <ul class="animate">
+              <li class="animate">English</li>
+            </ul>
+          </dropdown>
+          <center>
+            <div class="switch">
+              <input
+                id="language-toggle"
+                class="check-toggle check-toggle-round-flat"
+                type="checkbox"
+              />
+              <label for="language-toggle"></label>
+              <img src="./images/moon-stars.png" alt="" />
+              <span class="off">EN</span>
+            </div>
+          </center>
+        </div>
       </nav>
-      <script src="./index.js"></script>
+      <!-- <script src="./index.js"></script> -->
     </div>
   </body>
 </html>
