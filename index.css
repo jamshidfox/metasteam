@@ -19,6 +19,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
+  background-color: var(--violet);
 }
 .main {
   width: 100%;
