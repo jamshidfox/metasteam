@@ -4,12 +4,12 @@ const dark = {
   backgroundColor: "black",
   color: "white",
   borderRadius: "8px",
+  transition: "0.7s",
 };
 
-const white = {
+const light = {
   backgroundColor: "white",
   color: "black",
   borderRadius: "8px",
+  transition: "0.7s",
 };
-
-export { dark, white };
