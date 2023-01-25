@@ -323,17 +323,108 @@ input.check-toggle-round-flat:checked + label:after {
 .card-sections {
   width: 100%;
   /* height: 500px;d */
-  height: calc(100% - 32px - 30px);
+  padding-top: 30px;
+  height: calc(100% - 32px - 30px - 30px);
+}
+.card-section-1 {
+  display: flex;
+  flex-direction: column;
+}
+.card-section-1 input {
+  padding: 18px 32px;
+  border-radius: 16px;
+  border: none;
+  font-family: "inter", sans-serif;
+  color: var(--primary);
+  background-color: var(--secondary);
+  font-weight: 700;
+}
+.card-section-1 form {
+  display: flex;
+  background-color: var(--secondary);
+  border-radius: 16px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-section-1 form > input:focus {
+  outline: none;
+}
+.card-section-1 form > iconify-icon {
+  margin-right: 32px;
+  color: var(--primary);
+  font-size: 20px;
+}
+.card-section-1-time {
+  height: 40px;
+  background: rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  margin: 16px 0px;
+}
+.card-section-1-time > iconify-icon {
+  margin-right: 15px;
+  font-size: 24px;
+  color: var(--primary);
+}
+.card-section-1-time .texts {
+  font-family: "inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--primary);
+}
+.card-section-1 .check-text {
+  margin-top: 4px;
+  font-family: "inter", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+}
+.check-text-prices {
+  display: flex;
+  width: 100%;
+  margin-top: 30px;
+}
+.check-text-prices-left {
+  width: 30%;
+}
+.check-text-prices .sum {
+  font-family: "inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--primary);
+  opacity: 0.5;
+}
+.check-text-prices-left > .price {
+  font-family: "inter", sans-serif;
+  font-weight: 700;
+  font-size: 38px;
+  color: var(--primary);
+}
+.check-text-prices-right > .price {
+  font-family: "inter", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  color: var(--primary);
+  line-height: 48px;
+}
+.check-text-prices-right {
+  width: 70%;
 }
 .card-section-2 {
+  position: relative;
+  display: none;
   height: 100%;
-  display: flex;
   align-items: center;
   justify-content: center;
+  animation: in 1s;
 }
 .card-section-2 > iconify-icon {
   font-size: 140px;
   font-weight: 200;
+  color: var(--primary);
   animation: load 1s;
   animation-iteration-count: infinite;
 }
@@ -343,5 +434,25 @@ input.check-toggle-round-flat:checked + label:after {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+@keyframes in {
+  from {
+    opacity: 0;
+    top: -40px;
+  }
+  to {
+    opacity: 1;
+    top: 0;
+  }
+}
+@keyframes exit {
+  from {
+    opacity: 1;
+    top: 0px;
+  }
+  to {
+    opacity: 0;
+    top: 40px;
   }
 }
