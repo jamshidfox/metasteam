@@ -9,6 +9,11 @@ const instagramIcon = document.getElementById("instagram-icon");
 const facebookIcon = document.getElementById("facebook-icon");
 const body = document.querySelector("body");
 
+//functionality
+const secondCard = document.getElementsByClassName("card-section-2")[0];
+const thirdCard = document.getElementsByClassName("card-section-3")[0];
+const confirmationButton = document.getElementsByClassName("card-button");
+
 toggle.addEventListener("click", () => {
   if (toggle.id == "whiteLabel") {
     //Body
@@ -53,4 +58,13 @@ toggle.addEventListener("click", () => {
     facebookIcon.style.color = light.section.iconColors;
     //****************
   }
+});
+
+//Functionality
+confirmationButton[0].addEventListener("click", () => {
+  thirdCard.style.display = "none";
+
+  setTimeout(() => {
+    secondCard.style.display = "flex";
+  }, 1000);
 });
