@@ -3,6 +3,8 @@ const toggle = document.getElementById("darkLabel");
 const card = document.getElementsByClassName("card")[0];
 const cardThemeTexts = document.querySelectorAll(".theme-text");
 const loginSteamInput = document.getElementsByClassName("login-steam");
+const dropdownValue = document.getElementById("lang-change");
+const dropdownLang = document.getElementById("hide-show");
 const body = document.querySelector("body");
 
 //functionality
@@ -11,6 +13,8 @@ const secondCard = document.getElementsByClassName("card-section-2")[0];
 const thirdCard = document.getElementsByClassName("card-section-3")[0];
 const fourthCard = document.getElementsByClassName("card-section-4")[0];
 const confirmationButton = document.getElementsByClassName("card-button");
+const backToFirstBtn = document.getElementsByClassName("btn")[0];
+const backToFirstCardButton = document.getElementById("card-back");
 const topUp = document.getElementById("top-up");
 
 console.log(cardThemeTexts);
@@ -24,6 +28,7 @@ toggle.addEventListener("click", () => {
 
     //Section
     card.style.background = dark.section.card.backgroundColor;
+    backToFirstBtn.style.border = "1px solid white";
     for (let input of loginSteamInput) {
       input.style.background = dark.section.card.input;
     }
@@ -41,6 +46,8 @@ toggle.addEventListener("click", () => {
     //Section
 
     card.style.background = light.section.card.backgroundColor;
+    backToFirstBtn.style.border = "1px solid black";
+
     for (let input of loginSteamInput) {
       input.style.background = light.section.card.input;
     }
@@ -65,9 +72,23 @@ topUp.addEventListener("click", () => {
   }, 3000);
 });
 confirmationButton[0].addEventListener("click", () => {
-  thirdCard.style.display = "none";
-
   setTimeout(() => {
+    thirdCard.style.opacity = 0;
+    thirdCard.style.display = "none";
     fourthCard.style.display = "flex";
+    fourthCard.style.opacity = 1;
   }, 1000);
+});
+backToFirstCardButton.addEventListener("click", () => {
+  fourthCard.style.opacity = 0;
+  fourthCard.style.display = "none";
+  firstCard.style.display = "flex";
+  firstCard.style.opacity = 1;
+});
+dropdownValue.addEventListener("click", () => {
+  if (dropdownValue.innerHTML == "Русский") {
+    dropdownValue.innerHTML = "English";
+  } else {
+    dropdownValue.innerHTML = "Русский";
+  }
 });
