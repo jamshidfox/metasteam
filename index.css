@@ -329,6 +329,7 @@ input.check-toggle-round-flat:checked + label:after {
 .card-section-1 {
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 .card-section-1 input {
   padding: 18px 32px;
@@ -415,10 +416,10 @@ input.check-toggle-round-flat:checked + label:after {
 }
 .card-section-1 .submit {
   width: 100%;
-  margin-top: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: auto;
 }
 .card-section-1 .submit > .texts {
   width: 50%;
