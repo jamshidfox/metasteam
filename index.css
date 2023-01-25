@@ -443,6 +443,8 @@ input.check-toggle-round-flat:checked + label:after {
   position: relative;
   display: none;
   height: 100%;
+  /* display: flex; */
+  display: none;
   align-items: center;
   justify-content: center;
   animation: in 1s;
@@ -453,6 +455,72 @@ input.check-toggle-round-flat:checked + label:after {
   color: var(--primary);
   animation: load 1s;
   animation-iteration-count: infinite;
+}
+.card-section-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  justify-content: space-between;
+  height: 100%;
+  margin-top: 2rem;
+  font-family: "inter", sans-serif;
+}
+.card-detail-headline {
+  text-align: center;
+}
+.card-input-visa {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  font-size: 30px;
+  padding: 0rem 1rem;
+  height: 4rem;
+  background: rgba(0, 0, 0, 0.1);
+}
+.visa-logo {
+}
+.visa-logo img {
+  width: 80px;
+}
+.visa-number {
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 36px;
+  text-align: center;
+}
+.copy-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-steam-info {
+  text-align: center;
+}
+.card-overall {
+  text-align: center;
+}
+.card-overall h1 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 100px;
+  line-height: 121px;
+}
+.card-button {
+  height: 67px;
+  border-radius: 16px;
+  gap: 10px;
+  outline: none;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #ffffff;
+  background: #4caf50;
 }
 @keyframes load {
   0% {
