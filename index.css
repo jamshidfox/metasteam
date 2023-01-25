@@ -457,7 +457,7 @@ input.check-toggle-round-flat:checked + label:after {
   animation-iteration-count: infinite;
 }
 .card-section-3 {
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: space-between;
   justify-content: space-between;
