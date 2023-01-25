@@ -14,12 +14,11 @@
   --card-blur-secondary: rgba(16, 14, 29, 0.1);
 }
 body {
-  /* background-color: aqua; */
   width: 100%;
   height: 100vh;
   background: url("images/background.png"), rgba(38, 33, 57, 0.2);
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
   overflow: hidden;
   background-color: var(--violet);
   cursor: default;
@@ -29,7 +28,7 @@ body {
   height: 100%;
 }
 .nav {
-  width: fill;
+  /* width: fill; */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -49,50 +48,28 @@ body {
 .steam-text {
   color: var(--blue);
 }
-dropdown {
-  height: 20px;
-  display: inline-block;
-}
-dropdown label,
-dropdown ul li {
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  color: var(--primary);
   font-family: "inter", sans-serif;
-  display: block;
-  font-size: 14px;
-  width: 90px;
-  background: transparent;
-  padding: 2px 2px;
+  font-weight: 400;
+  font-size: 16px;
 }
-dropdown label:hover,
-dropdown ul li:hover {
-  cursor: pointer;
+.dropdown .text {
+  display: flex;
+  align-items: center;
 }
-dropdown label {
-  color: white;
-  position: relative;
-  z-index: 2;
-}
-dropdown input {
+.dropdown .hide-show {
   display: none;
-}
-dropdown input ~ ul {
+  /* display: flex; */
   position: relative;
-  visibility: hidden;
-  background-color: white;
-  opacity: 0;
-  top: -20px;
-  z-index: 1;
+  flex-direction: column;
+  align-items: center;
+  animation: in 0.5s;
 }
-dropdown input:checked + label {
-  background: #ffffff;
-  color: var(--secondary);
-}
-
-dropdown input:checked ~ ul {
-  visibility: visible;
-  opacity: 1;
-  top: 0;
-}
-
 .animate {
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
@@ -110,27 +87,29 @@ dropdown input:checked ~ ul {
   margin: 0 10px;
   height: 60px;
 }
-
-#switch > img {
+#switch #moon {
+  color: white;
   position: relative;
-  top: -48px;
-  left: 12px;
-  pointer-events: none;
+  top: 17px;
+  left: 16px;
+  font-size: 22px;
+  z-index: 1;
 }
-#sun-img {
-  top: -46px;
-  left: 26px;
+#switch #sun {
+  color: white;
+  position: relative;
+  top: 16px;
+  font-size: 22px;
+  left: 40px;
+  z-index: 1;
 }
+
 input.check-toggle-round-flat:checked ~ .off {
   background: rgba(255, 255, 255, 0.1);
 }
 
 input.check-toggle-round-flat:checked ~ .on {
   color: var(--blue);
-}
-
-#switch > img {
-  width: 32px;
 }
 
 .check-toggle {
@@ -326,13 +305,15 @@ input.check-toggle-round-flat:checked + label:after {
   width: 100%;
   /* height: 500px;d */
   padding-top: 30px;
-  height: calc(100% - 32px - 30px - 30px);
+  height: calc(100% - 32px - 30px);
 }
 .card-section-1 {
-  opacity: 0;
-  display: none;
+  opacity: 1;
+  position: relative;
+  display: flex;
   flex-direction: column;
   height: 100%;
+  animation: in 1s;
 }
 .card-section-1 input {
   padding: 18px 32px;
@@ -425,12 +406,13 @@ input.check-toggle-round-flat:checked + label:after {
   margin-top: auto;
 }
 .card-section-1 .submit > .texts {
-  width: 50%;
+  width: 55%;
   text-align: center;
   color: var(--primary);
   font-family: "inter", sans-serif;
   font-weight: 400;
   font-size: 10px;
+  margin-bottom: 10px;
 }
 .card-section-1 .submit > button {
   width: 100%;
@@ -442,6 +424,7 @@ input.check-toggle-round-flat:checked + label:after {
   font-weight: 700;
   font-size: 18px;
   color: var(--primary);
+  cursor: pointer;
 }
 .card-section-2 {
   position: relative;
@@ -462,12 +445,13 @@ input.check-toggle-round-flat:checked + label:after {
 }
 .card-section-3 {
   display: none;
+  position: relative;
   flex-direction: column;
   align-items: space-between;
   justify-content: space-between;
   height: 100%;
-  margin-top: 2rem;
   font-family: "inter", sans-serif;
+  animation: in 1s;
 }
 .card-detail-headline {
   text-align: center;
@@ -481,6 +465,8 @@ input.check-toggle-round-flat:checked + label:after {
   padding: 0rem 1rem;
   height: 4rem;
   background: rgba(0, 0, 0, 0.1);
+
+  border-radius: 8px;
 }
 .visa-logo {
 }
@@ -497,8 +483,12 @@ input.check-toggle-round-flat:checked + label:after {
 }
 .copy-icon {
   display: flex;
+  opacity: 0.5;
   align-items: center;
   justify-content: center;
+}
+.copy-icon > iconify-icon {
+  font-size: 24px;
 }
 .card-steam-info {
   text-align: center;
@@ -513,9 +503,23 @@ input.check-toggle-round-flat:checked + label:after {
   font-size: 100px;
   line-height: 121px;
 }
+.card-overall p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  opacity: 0.5;
+}
+.card-overall h1 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 100px;
+  line-height: 121px;
+}
 .card-button {
   height: 67px;
   border-radius: 16px;
+  border: none;
   gap: 10px;
   outline: none;
   font-family: "Inter";
@@ -528,24 +532,26 @@ input.check-toggle-round-flat:checked + label:after {
 }
 
 .card-section-4 {
+  position: relative;
+  opacity: 0;
+  display: none;
   height: 100%;
-  display: flex;
   flex-direction: column;
-  margin-top: 30px;
   cursor: default;
+  animation: in 1s;
 }
 .card-section-4 > iconify-icon {
   font-size: 60px;
   color: var(--green);
 }
 .card-section-4 .texts {
-  margin-top: 10px;
+  margin-top: 30px;
   font-family: "inter", sans-serif;
   font-weight: 700;
   font-size: 38px;
 }
 .card-section-4 .texts-sub {
-  margin-top: 20px;
+  margin-top: 30px;
   font-family: "inter", sans-serif;
   font-weight: 400;
   font-size: 18px;

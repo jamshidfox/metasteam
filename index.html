@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Oswald:wght@500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@700&family=Inter:wght@400;700&family=Oswald:wght@500&display=swap"
       rel="stylesheet"
     />
     <title>Meta Steam</title>
@@ -22,24 +22,39 @@
           META<span class="steam-text">STEAM</span>
         </div>
         <div class="nav-controls">
-          <dropdown>
+          <!-- <dropdown>
             <input id="toggle2" type="checkbox" />
             <label for="toggle2" class="animate theme-text"
-              >Русский<i class="fa fa-list float-right"></i
+              >Русский<iconify-icon
+                id="down"
+                icon="material-symbols:chevron-left"
+                rotate="270deg"
+              ></iconify-icon
             ></label>
             <ul class="animate">
               <li class="animate theme-text">English</li>
             </ul>
-          </dropdown>
+          </dropdown> -->
+          <div class="dropdown">
+            <div class="text" id="dropdown-value">
+              <div id="lang-change">Русский</div>
+              <iconify-icon
+                icon="material-symbols:chevron-left"
+                rotate="270deg"
+              ></iconify-icon>
+            </div>
+            <div class="hide-show">English</div>
+          </div>
           <div id="switch">
             <input
               id="language-toggle"
               class="check-toggle check-toggle-round-flat"
               type="checkbox"
             />
-            <label for="language-toggle" id="darkLabel"></label>
-            <img src="./images/moon-stars.png" alt="" />
-            <img id="sun-img" src="./images/sun.png" alt="" />
+            <label for="language-toggle" id="darkLabel">
+              <iconify-icon id="moon" icon="ri:moon-clear-fill"></iconify-icon>
+              <iconify-icon id="sun" icon="ph:sun-fill"></iconify-icon>
+            </label>
           </div>
         </div>
       </div>
@@ -120,8 +135,14 @@
                 </div>
                 <div class="submit">
                   <div class="texts theme-text animate">
-                    Нажимая кнопку пополнить, я соглашаюсь с Правилами и
-                    Публичной офертой
+                    Нажимая кнопку пополнить, я соглашаюсь с
+                    <span style="text-decoration: underline; cursor: pointer"
+                      >Правилами</span
+                    >
+                    и
+                    <span style="text-decoration: underline; cursor: pointer"
+                      >Публичной офертой</span
+                    >
                   </div>
                   <button id="top-up">Пополнить</button>
                 </div>
@@ -129,7 +150,7 @@
               <div class="card-section-2 animate">
                 <iconify-icon icon="tabler:loader-2"></iconify-icon>
               </div>
-              <div class="card-section-3">
+              <div class="card-section-3 animate">
                 <div class="card-detail-headline animate theme-text">
                   Переведите средства на данную карту и после оплаты нажмите на
                   кнопку подтвердить
@@ -143,8 +164,8 @@
                   </div>
                   <div class="copy-icon">
                     <iconify-icon
-                      icon="ph:copy"
-                      flip="horizontal"
+                      icon="ph:copy-bold"
+                      rotate="270deg"
                     ></iconify-icon>
                   </div>
                 </div>
@@ -162,16 +183,21 @@
                 <iconify-icon
                   icon="material-symbols:check-circle"
                 ></iconify-icon>
-                <div class="texts">Ваша заявка в рассмотрении</div>
-                <div class="texts texts-sub">
+                <div class="texts animate theme-text">
+                  Ваша заявка в рассмотрении
+                </div>
+                <div class="texts texts-sub animate theme-text">
                   Мы проверим Вашу оплату и пополним Ваш счет в ближайшее время
                 </div>
                 <div class="btn">
                   <iconify-icon
+                    class="animate theme-text"
                     icon="material-symbols:arrow-forward"
                     flip="horizontal"
                   ></iconify-icon>
-                  <div class="texts">Вернуться</div>
+                  <div class="texts animate theme-text" id="card-back">
+                    Вернуться
+                  </div>
                 </div>
               </div>
             </div>
