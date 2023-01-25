@@ -22,6 +22,7 @@ body {
   background-size: 100% 100%;
   overflow: hidden;
   background-color: var(--violet);
+  cursor: default;
 }
 .main {
   width: 100%;
@@ -275,6 +276,7 @@ input.check-toggle-round-flat:checked + label:after {
 .left-container-icons > iconify-icon {
   color: var(--primary);
   font-size: 30px;
+  cursor: pointer;
 }
 .blur-1 {
   background: var(--blue);
@@ -327,7 +329,8 @@ input.check-toggle-round-flat:checked + label:after {
   height: calc(100% - 32px - 30px - 30px);
 }
 .card-section-1 {
-  display: flex;
+  opacity: 0;
+  display: none;
   flex-direction: column;
   height: 100%;
 }
@@ -523,6 +526,55 @@ input.check-toggle-round-flat:checked + label:after {
   color: #ffffff;
   background: #4caf50;
 }
+
+.card-section-4 {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  cursor: default;
+}
+.card-section-4 > iconify-icon {
+  font-size: 60px;
+  color: var(--green);
+}
+.card-section-4 .texts {
+  margin-top: 10px;
+  font-family: "inter", sans-serif;
+  font-weight: 700;
+  font-size: 38px;
+}
+.card-section-4 .texts-sub {
+  margin-top: 20px;
+  font-family: "inter", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+.card-section-4 .btn {
+  min-width: 80px;
+  width: 35%;
+  border-radius: 16px;
+  height: 50px;
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  cursor: pointer;
+}
+.card-section-4 .btn > iconify-icon {
+  font-size: 20px;
+  color: var(--primary);
+}
+.card-section-4 .btn > .texts {
+  margin: 0;
+  color: var(--primary);
+  font-family: "inter", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  margin-left: 8px;
+}
+
 @keyframes load {
   0% {
     transform: rotate(0deg);
@@ -539,15 +591,5 @@ input.check-toggle-round-flat:checked + label:after {
   to {
     opacity: 1;
     top: 0;
-  }
-}
-@keyframes exit {
-  from {
-    opacity: 1;
-    top: 0px;
-  }
-  to {
-    opacity: 0;
-    top: 40px;
   }
 }
