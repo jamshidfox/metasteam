@@ -18,15 +18,17 @@
   <body>
     <div class="main">
       <div class="nav">
-        <div class="meta-text">META<span class="steam-text">STEAM</span></div>
+        <div class="meta-text animate theme-text">
+          META<span class="steam-text">STEAM</span>
+        </div>
         <div class="nav-controls">
           <dropdown>
             <input id="toggle2" type="checkbox" />
-            <label for="toggle2" class="animate"
+            <label for="toggle2" class="animate theme-text"
               >Русский<i class="fa fa-list float-right"></i
             ></label>
             <ul class="animate">
-              <li class="animate">English</li>
+              <li class="animate theme-text">English</li>
             </ul>
           </dropdown>
           <div id="switch">
@@ -46,27 +48,24 @@
           <div class="left-container">
             <div class="left-numbers">
               <div id="h5" class="animate">19 241</div>
-              <div id="p" class="animate">пополнений</div>
+              <div id="p" class="animate theme-text">пополнений</div>
             </div>
-            <div id="h2" class="animate">
+            <div id="h2" class="animate theme-text">
               Пополняйте баланс Steam вместе с нами
             </div>
-            <div id="p" class="animate">Быстро и безопасно</div>
+            <div id="p" class="animate theme-text">Быстро и безопасно</div>
             <div class="left-container-icons">
               <iconify-icon
-                class="animate"
+                class="animate theme-text"
                 icon="fa-brands:telegram-plane"
-                id="telegram-icon"
               ></iconify-icon>
               <iconify-icon
-                class="animate"
+                class="animate theme-text"
                 icon="mdi:instagram"
-                id="instagram-icon"
               ></iconify-icon>
               <iconify-icon
-                class="animate"
+                class="animate theme-text"
                 icon="uil:facebook"
-                id="facebook-icon"
               ></iconify-icon>
             </div>
           </div>
@@ -74,43 +73,64 @@
         <div class="right">
           <div class="card">
             <div class="card-header">
-              <iconify-icon icon="bi:steam"></iconify-icon>
-              <div class="card-header-text">Пополнить Steam</div>
+              <iconify-icon
+                icon="bi:steam"
+                class="animate theme-text"
+              ></iconify-icon>
+              <div class="card-header-text theme-text animate">
+                Пополнить Steam
+              </div>
             </div>
             <div class="card-sections">
               <div class="card-section-1">
-                <form>
-                  <input type="text" placeholder="Логин Steam" />
-                  <iconify-icon icon="material-symbols:info"></iconify-icon>
+                <form class="login-steam animate">
+                  <input
+                    type="text"
+                    placeholder="Логин Steam"
+                    class="login-steam animate"
+                  />
+                  <iconify-icon
+                    icon="material-symbols:info"
+                    class="animate theme-text"
+                  ></iconify-icon>
                 </form>
-                <div class="card-section-1-time animate">
-                  <iconify-icon icon="material-symbols:info"></iconify-icon>
-                  <div class="texts">Время зачисления ~ 24 часов</div>
+                <div class="card-section-1-time">
+                  <iconify-icon
+                    icon="material-symbols:info"
+                    class="animate theme-text"
+                  ></iconify-icon>
+                  <div class="texts animate theme-text">
+                    Время зачисления ~ 24 часов
+                  </div>
                 </div>
-                <div class="check-text">Проверьте данные</div>
+                <div class="check-text theme-text animate">
+                  Проверьте данные
+                </div>
                 <div class="check-text-prices">
                   <div class="check-text-prices-left">
-                    <div class="sum">Сумма</div>
-                    <div class="price">100 ₽</div>
+                    <div class="sum animate theme-text">Сумма</div>
+                    <div class="price theme-text animate">100 ₽</div>
                   </div>
                   <div class="check-text-prices-right">
-                    <div class="sum">Сумма с учетом комиссии</div>
-                    <div class="price">121 ₽</div>
+                    <div class="sum animate theme-text">
+                      Сумма с учетом комиссии
+                    </div>
+                    <div class="price theme-text animate">121 ₽</div>
                   </div>
                 </div>
                 <div class="submit">
-                  <div class="texts">
+                  <div class="texts theme-text animate">
                     Нажимая кнопку пополнить, я соглашаюсь с Правилами и
                     Публичной офертой
                   </div>
-                  <button>Пополнить</button>
+                  <button id="top-up">Пополнить</button>
                 </div>
               </div>
               <div class="card-section-2 animate">
                 <iconify-icon icon="tabler:loader-2"></iconify-icon>
               </div>
-              <div class="card-section-3 animate">
-                <div class="card-detail-headline">
+              <div class="card-section-3">
+                <div class="card-detail-headline animate theme-text">
                   Переведите средства на данную карту и после оплаты нажмите на
                   кнопку подтвердить
                 </div>
@@ -118,7 +138,9 @@
                   <div class="visa-logo">
                     <img src="./images/visa.webp" />
                   </div>
-                  <div class="visa-number">4024 1994 1251 0025</div>
+                  <div class="visa-number animate theme-text">
+                    4024 1994 1251 0025
+                  </div>
                   <div class="copy-icon">
                     <iconify-icon
                       icon="ph:copy"
@@ -126,13 +148,13 @@
                     ></iconify-icon>
                   </div>
                 </div>
-                <div class="card-steam-info">
+                <div class="card-steam-info animate theme-text">
                   Во время пополнения, пожалуйста укажите в комментариях ваш
                   логин в Steam
                 </div>
                 <div class="card-overall">
-                  <p>Итого:</p>
-                  <h1>126 ₽</h1>
+                  <p class="animate theme-text">Итого:</p>
+                  <h1 class="animate theme-text">126 ₽</h1>
                 </div>
                 <button class="card-button">Подтверждаю перевод</button>
               </div>
