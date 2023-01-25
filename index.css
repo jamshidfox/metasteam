@@ -71,15 +71,7 @@ body {
   animation: in 0.5s;
 }
 .animate {
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -ms-transition: all 0.3s;
-  -ms-transition: all 0.3s;
   transition: all 0.3s;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden; /* Chrome and Safari */
-  -moz-backface-visibility: hidden; /* Firefox */
-  -ms-backface-visibility: hidden; /* Internet Explorer */
 }
 #switch {
   position: relative;
