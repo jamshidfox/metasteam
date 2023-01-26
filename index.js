@@ -6,7 +6,8 @@ const loginSteamInput = document.getElementsByClassName("login-steam");
 const dropdownValue = document.getElementById("lang-change");
 const dropdownLang = document.getElementById("hide-show");
 const faderInput = document.getElementById("fader");
-const faderLabel = document.getElementById("fader-label");
+const faderLabel = document.getElementsByClassName("fader-label");
+const commisionLabel = document.getElementById("commision-price");
 const body = document.querySelector("body");
 
 //functionality
@@ -96,5 +97,9 @@ dropdownValue.addEventListener("click", () => {
 
 faderInput.addEventListener("change", (e) => {
   const result = e.target.value;
-  faderLabel.innerHTML = result;
+  const commision = +result + 20;
+  for (let x of faderLabel) {
+    x.innerHTML = result + "£";
+  }
+  commisionLabel.innerHTML = commision + "£";
 });
