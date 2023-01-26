@@ -573,6 +573,9 @@ input.check-toggle-round-flat:checked + label:after {
   margin-left: 8px;
 }
 
+#fader {
+  width: 100%;
+}
 @keyframes load {
   0% {
     transform: rotate(0deg);
