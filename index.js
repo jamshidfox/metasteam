@@ -5,6 +5,8 @@ const cardThemeTexts = document.querySelectorAll(".theme-text");
 const loginSteamInput = document.getElementsByClassName("login-steam");
 const dropdownValue = document.getElementById("lang-change");
 const dropdownLang = document.getElementById("hide-show");
+const faderInput = document.getElementById("fader");
+const faderLabel = document.getElementById("fader-label");
 const body = document.querySelector("body");
 
 //functionality
@@ -17,7 +19,6 @@ const backToFirstBtn = document.getElementsByClassName("btn")[0];
 const backToFirstCardButton = document.getElementById("card-back");
 const topUp = document.getElementById("top-up");
 
-console.log(cardThemeTexts);
 toggle.addEventListener("click", () => {
   if (toggle.id == "whiteLabel") {
     //Body
@@ -91,4 +92,9 @@ dropdownValue.addEventListener("click", () => {
   } else {
     dropdownValue.innerHTML = "Русский";
   }
+});
+
+faderInput.addEventListener("change", (e) => {
+  const result = e.target.value;
+  faderLabel.innerHTML = result;
 });
