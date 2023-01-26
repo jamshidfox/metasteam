@@ -572,9 +572,28 @@ input.check-toggle-round-flat:checked + label:after {
   font-size: 16px;
   margin-left: 8px;
 }
-
+.slider {
+  display: flex;
+  align-items: flex-end;
+  margin-top: 1rem;
+  height: 3rem;
+}
 #fader {
   width: 100%;
+}
+#fader-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  margin-right: 1rem;
+  width: 145px;
+  height: 60px;
+  left: 762px;
+  top: 314px;
+  background: #ffffff;
+  color: black;
+  border-radius: 16px;
 }
 @keyframes load {
   0% {
