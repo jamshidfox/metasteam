@@ -28,34 +28,34 @@ toggle.addEventListener("click", () => {
     body.style.backgroundColor = dark.backgroundColor;
     toggle.id = "darkLabel";
     //***************
-    r.style.setProperty("--primary", "white");
+    // r.style.setProperty("--primary", "white");
     //Section
     card.style.background = dark.section.card.backgroundColor;
     backToFirstBtn.style.border = "1px solid white";
-    // for (let input of loginSteamInput) {
-    //   input.style.background = dark.section.card.input;
-    // }
-    // for (let text of cardThemeTexts) {
-    //   text.style.color = dark.section.color;
-    // }
+    for (let input of loginSteamInput) {
+      input.style.background = dark.section.card.input;
+    }
+    for (let text of cardThemeTexts) {
+      text.style.color = dark.section.color;
+    }
     //****************
   } else {
     //Body
     body.style.backgroundColor = light.backgroundColor;
     toggle.id = "whiteLabel";
     //***************
-    r.style.setProperty("--primary", "#1f2024");
+    // r.style.setProperty("--primary", "#1f2024");
     //Section
 
     card.style.background = light.section.card.backgroundColor;
     backToFirstBtn.style.border = "1px solid black";
 
-    // for (let input of loginSteamInput) {
-    //   input.style.background = light.section.card.input;
-    // }
-    // for (let text of cardThemeTexts) {
-    //   text.style.color = light.section.color;
-    // }
+    for (let input of loginSteamInput) {
+      input.style.background = light.section.card.input;
+    }
+    for (let text of cardThemeTexts) {
+      text.style.color = light.section.color;
+    }
     //****************
   }
 });
