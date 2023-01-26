@@ -71,6 +71,7 @@ body {
   animation: in 0.5s;
 }
 .animate {
+  transition: all 0.3s;
 }
 #switch {
   position: relative;
