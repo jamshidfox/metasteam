@@ -99,9 +99,9 @@ faderInput.addEventListener("change", (e) => {
   const result = e.target.value;
   const commision = +result + 20;
   for (let x of faderLabel) {
-    x.innerHTML = result + "£";
+    x.innerHTML = result + "₽";
   }
-  commisionLabel.innerHTML = commision + "£";
+  commisionLabel.innerHTML = commision + "₽";
 });
 
 infoIcon.addEventListener("click", () => {
