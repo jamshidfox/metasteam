@@ -120,7 +120,9 @@
                 </form>
                 <div>
                   <div class="slider">
-                    <label for="fader" id="fader-label">250</label>
+                    <label for="fader" class="fader-label" id="fader-label"
+                      >250£</label
+                    >
                     <input
                       type="range"
                       min="250"
@@ -155,13 +157,13 @@
                 <div class="check-text-prices">
                   <div class="check-text-prices-left">
                     <div class="sum animate theme-text">Сумма</div>
-                    <div class="price theme-text animate">100 ₽</div>
+                    <div class="price theme-text animate fader-label">0 ₽</div>
                   </div>
                   <div class="check-text-prices-right">
                     <div class="sum animate theme-text">
                       Сумма с учетом комиссии
                     </div>
-                    <div class="price theme-text animate">121 ₽</div>
+                    <div class="price theme-text animate" id="commision-price">121 ₽</div>
                   </div>
                 </div>
                 <div class="submit">
