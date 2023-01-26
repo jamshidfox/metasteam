@@ -20,7 +20,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   overflow-x: hidden;
-
   background-color: var(--violet);
   cursor: default;
 }
@@ -35,16 +34,16 @@ body {
   justify-content: space-between;
   height: 8%;
   background: transparent;
-  padding: 24px 120px;
+  padding: 1.5rem 7.5rem;
 }
 .meta-text {
   transition: all 0.3s;
   color: var(--primary);
   font-family: "oswald", sans-serif;
-  font-size: 38px;
+  font-size: 2.375rem;
   font-weight: 500;
   font-style: normal;
-  line-height: 56px;
+  line-height: 3.5rem;
 }
 .steam-text {
   color: var(--blue);
@@ -57,7 +56,7 @@ body {
   color: var(--primary);
   font-family: "inter", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1rem;
 }
 .dropdown .text {
   display: flex;
@@ -77,23 +76,23 @@ body {
 #switch {
   position: relative;
   display: inline-block;
-  margin: 0 10px;
-  height: 60px;
+  margin: 0 0.625rem;
+  height: 3.75rem;
 }
 #switch #moon {
   color: white;
   position: relative;
-  top: 17px;
-  left: 16px;
-  font-size: 22px;
+  top: 1.0625rem;
+  left: 1rem;
+  font-size: 1.375rem;
   z-index: 1;
 }
 #switch #sun {
   color: white;
   position: relative;
-  top: 16px;
-  font-size: 22px;
-  left: 40px;
+  top: 1rem;
+  font-size: 1.375rem;
+  left: 2.5rem;
   z-index: 1;
 }
 
@@ -124,15 +123,11 @@ input.check-toggle-round-flat:checked ~ .on {
 }
 
 input.check-toggle-round-flat + label {
-  padding: 2px;
-  width: 104px;
-  height: 55px;
+  padding: 0.125rem;
+  width: 6.5rem;
+  height: 3.4375rem;
   background: rgba(255, 255, 255, 0.1);
-  -webkit-border-radius: 60px;
-  -moz-border-radius: 60px;
-  -ms-border-radius: 60px;
-  -o-border-radius: 60px;
-  border-radius: 60px;
+  border-radius: 3.75rem;
 }
 input.check-toggle-round-flat + label:before,
 input.check-toggle-round-flat + label:after {
@@ -142,31 +137,21 @@ input.check-toggle-round-flat + label:after {
 }
 
 input.check-toggle-round-flat + label:before {
-  top: 2px;
-  left: 2px;
-  bottom: 2px;
-  right: 2px;
+  top: 0.125rem;
+  left: 0.125rem;
+  bottom: 0.125rem;
+  right: 0.125rem;
   background: rgba(255, 255, 255, 0.1);
-  -webkit--moz-border-radius: 60px;
-  -ms-border-radius: 60px;
-  -o-border-radius: 60px;
-  border-radius: 60px;
+  border-radius: 3.75rem;
 }
 input.check-toggle-round-flat + label:after {
-  top: 4px;
-  left: 4px;
-  bottom: 4px;
-  width: 50px;
-  height: 50px;
+  top: 0.25rem;
+  left: 0.25rem;
+  bottom: 0.25rem;
+  width: 3.125rem;
+  height: 3.125rem;
   background-color: var(--blue);
-  -webkit-border-radius: 52px;
-  -moz-border-radius: 52px;
-  -ms-border-radius: 52px;
-  -o-border-radius: 52px;
-  border-radius: 50px;
-  -webkit-transition: margin 0.2s;
-  -moz-transition: margin 0.2s;
-  -o-transition: margin 0.2s;
+  border-radius: 3.125rem;
   transition: margin 0.2s;
 }
 
@@ -174,13 +159,13 @@ input.check-toggle-round-flat:checked + label {
 }
 
 input.check-toggle-round-flat:checked + label:after {
-  margin-left: 50px;
+  margin-left: 3.125rem;
 }
 
 .section {
   display: flex;
   color: var(--primary);
-  height: calc(92% - 48px);
+  height: calc(92% - 3rem);
 }
 .left {
   width: 50%;
@@ -194,7 +179,7 @@ input.check-toggle-round-flat:checked + label:after {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   width: 50%;
   height: 100%;
 }
@@ -208,50 +193,50 @@ input.check-toggle-round-flat:checked + label:after {
   font-weight: 600;
   font-style: normal;
   text-align: center;
-  font-size: 20px;
-  line-height: 29px;
-  min-width: 90px;
-  height: 30px;
-  padding: 7px 5px;
+  font-size: 1.25rem;
+  line-height: 1.8125rem;
+  min-width: 5.625rem;
+  height: 1.875rem;
+  padding: 0.4375rem 0.3125rem;
   background-color: var(--blue);
-  border-radius: 30px;
+  border-radius: 1.875rem;
 }
 .left-numbers > #p {
   font-family: "inter", sans-serif;
   font-weight: 400;
   font-style: normal;
   text-align: center;
-  font-size: 18px;
-  margin-left: 8px;
+  font-size: 1.125rem;
+  margin-left: 0.5rem;
 }
 .left-container > #h2 {
   font-family: "inter", sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 44px;
-  line-height: 44px;
-  margin: 15px 0px;
+  font-size: 2.75rem;
+  line-height: 2.75rem;
+  margin: 0.9375rem;
 }
 .left-container {
   width: 80%;
-  max-width: 480px;
+  max-width: 32rem;
 }
 .left-container > #p {
   font-family: "inter", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 18px;
-  margin: 15px 0px;
+  font-size: 1.125rem;
+  margin: 0.9375rem 0px;
 }
 .left-container-icons {
-  margin-top: 20px;
+  margin-top: 1.25rem;
   display: flex;
   justify-content: space-between;
-  width: 140px;
+  width: 8.75rem;
 }
 .left-container-icons > iconify-icon {
   color: var(--primary);
-  font-size: 30px;
+  font-size: 1.875rem;
   cursor: pointer;
 }
 .blur-1 {
@@ -275,15 +260,16 @@ input.check-toggle-round-flat:checked + label:after {
   z-index: 0;
 }
 .card {
-  width: 70%;
-  min-height: 540px;
-  height: calc(85% - 60px);
+  width: 60%;
+  min-height: 28.75rem;
+  min-width: 32rem;
+  height: calc(85% - 3.75rem);
   background: var(--card-blur-primary);
   backdrop-filter: blur(15px);
   /* Note: backdrop-filter has minimal browser support */
-  border-radius: 24px;
-  padding: 30px;
-  margin-top: 40px;
+  border-radius: 1.5rem;
+  padding: 1.875rem;
+  margin-top: 2.5rem;
 }
 .card-header {
   display: flex;
@@ -293,13 +279,13 @@ input.check-toggle-round-flat:checked + label:after {
 }
 .card-header > iconify-icon {
   color: var(--primary);
-  font-size: 32px;
+  font-size: 2rem;
 }
 .card-header-text {
   font-family: "inter", sans-serif;
   font-weight: 700;
-  font-size: 20px;
-  margin-left: 20px;
+  font-size: 1.25rem;
+  margin-left: 1.25rem;
 }
 .card-sections {
   width: 100%;
@@ -309,15 +295,15 @@ input.check-toggle-round-flat:checked + label:after {
 .card-section-1 {
   opacity: 1;
   position: relative;
-  /* display: flex; */
-  display: none;
+  display: flex;
+  /* display: none; */
   flex-direction: column;
   height: 100%;
   animation: in 1s;
 }
 .card-section-1 input {
-  padding: 18px 32px;
-  border-radius: 16px;
+  padding: 1.125rem 2rem;
+  border-radius: 1rem;
   border: none;
   font-family: "inter", sans-serif;
   color: var(--primary);
@@ -327,7 +313,7 @@ input.check-toggle-round-flat:checked + label:after {
 .card-section-1 form {
   display: flex;
   background-color: var(--secondary);
-  border-radius: 16px;
+  border-radius: 1rem;
   width: 100%;
   align-items: center;
   justify-content: space-between;
@@ -337,43 +323,43 @@ input.check-toggle-round-flat:checked + label:after {
   outline: none;
 }
 .card-section-1 form > iconify-icon {
-  margin-right: 32px;
+  margin-right: 2rem;
   color: var(--primary);
-  font-size: 20px;
+  font-size: 1.25rem;
   cursor: pointer;
   z-index: 2;
 }
 
 .card-section-1-time {
-  height: 40px;
+  height: 2.5rem;
   background: rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 8px;
-  margin: 16px 0px;
+  border-radius: 0.5rem;
+  margin: 1rem 0px;
 }
 .card-section-1-time > iconify-icon {
-  margin-right: 15px;
-  font-size: 24px;
+  margin-right: 0.9375rem;
+  font-size: 1.5rem;
   color: var(--primary);
 }
 .card-section-1-time .texts {
   font-family: "inter", sans-serif;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: var(--primary);
 }
 .card-section-1 .check-text {
-  margin-top: 4px;
+  margin-top: 0.25rem;
   font-family: "inter", sans-serif;
   font-weight: 700;
-  font-size: 22px;
+  font-size: 1.375rem;
 }
 .check-text-prices {
   display: flex;
   width: 100%;
-  margin-top: 30px;
+  margin-top: 1.875rem;
 }
 .check-text-prices-left {
   width: 30%;
@@ -381,22 +367,22 @@ input.check-toggle-round-flat:checked + label:after {
 .check-text-prices .sum {
   font-family: "inter", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1rem;
   color: var(--primary);
   opacity: 0.5;
 }
 .check-text-prices-left > .price {
   font-family: "inter", sans-serif;
   font-weight: 700;
-  font-size: 38px;
+  font-size: 2.375rem;
   color: var(--primary);
 }
 .check-text-prices-right > .price {
   font-family: "inter", sans-serif;
   font-weight: 700;
-  font-size: 30px;
+  font-size: 1.875rem;
   color: var(--primary);
-  line-height: 48px;
+  line-height: 3rem;
 }
 .check-text-prices-right {
   width: 70%;
@@ -414,32 +400,32 @@ input.check-toggle-round-flat:checked + label:after {
   color: var(--primary);
   font-family: "inter", sans-serif;
   font-weight: 400;
-  font-size: 10px;
-  margin-bottom: 10px;
+  font-size: 0.625rem;
+  margin-bottom: 0.625rem;
 }
 .card-section-1 .submit > button {
   width: 100%;
-  border-radius: 16px;
-  height: 52px;
+  border-radius: 1rem;
+  height: 3.25rem;
   background-color: var(--blue);
   border: none;
   font-family: "inter", sans-serif;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 1.125;
   color: var(--primary);
   cursor: pointer;
 }
 .card-section-2 {
   position: relative;
   height: 100%;
-  /* display: none; */
-  display: flex;
+  display: none;
+  /* display: flex; */
   align-items: center;
   justify-content: center;
   animation: in 1s;
 }
 .card-section-2 > iconify-icon {
-  font-size: 140px;
+  font-size: 8.75rem;
   font-weight: 200;
   color: var(--primary);
   animation: load 1s;
@@ -463,24 +449,24 @@ input.check-toggle-round-flat:checked + label:after {
   justify-content: space-between;
   align-items: center;
   margin-top: 1rem;
-  font-size: 30px;
+  font-size: 1.875rem;
   padding: 0rem 1rem;
   height: 4rem;
   background: rgba(0, 0, 0, 0.1);
 
-  border-radius: 8px;
+  border-radius: 0.5rem;
 }
 .visa-logo {
 }
 .visa-logo img {
-  width: 80px;
+  width: 5rem;
 }
 .visa-number {
   font-family: "IBM Plex Mono";
   font-style: normal;
   font-weight: 700;
-  font-size: 28px;
-  line-height: 36px;
+  font-size: 1.75rem;
+  line-height: 2.25rem;
   text-align: center;
 }
 .copy-icon {
@@ -490,7 +476,7 @@ input.check-toggle-round-flat:checked + label:after {
   justify-content: center;
 }
 .copy-icon > iconify-icon {
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 .card-steam-info {
   text-align: center;
@@ -502,8 +488,8 @@ input.check-toggle-round-flat:checked + label:after {
   font-family: "Inter";
   font-style: normal;
   font-weight: 700;
-  font-size: 100px;
-  line-height: 121px;
+  font-size: 6.25rem;
+  line-height: 7.5625rem;
 }
 .card-overall p {
   font-family: "Inter";
@@ -515,20 +501,20 @@ input.check-toggle-round-flat:checked + label:after {
   font-family: "Inter";
   font-style: normal;
   font-weight: 700;
-  font-size: 100px;
-  line-height: 121px;
+  font-size: 6.25rem;
+  line-height: 7.5625rem;
 }
 .card-button {
-  height: 67px;
-  border-radius: 16px;
+  height: 4.1875rem;
+  border-radius: 1rem;
   border: none;
-  gap: 10px;
+  gap: 0.625rem;
   outline: none;
   font-family: "Inter";
   font-style: normal;
   font-weight: 700;
-  font-size: 24px;
-  line-height: 29px;
+  font-size: 1.5rem;
+  line-height: 1.8125rem;
   color: #ffffff;
   background: #4caf50;
   margin-top: auto;
@@ -544,26 +530,26 @@ input.check-toggle-round-flat:checked + label:after {
   animation: in 1s;
 }
 .card-section-4 > iconify-icon {
-  font-size: 60px;
+  font-size: 3.75rem;
   color: var(--green);
 }
 .card-section-4 .texts {
-  margin-top: 30px;
+  margin-top: 1.875rem;
   font-family: "inter", sans-serif;
   font-weight: 700;
-  font-size: 38px;
+  font-size: 2.375rem;
 }
 .card-section-4 .texts-sub {
-  margin-top: 30px;
+  margin-top: 1.875rem;
   font-family: "inter", sans-serif;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 .card-section-4 .btn {
-  min-width: 80px;
+  min-width: 5rem;
   width: 35%;
-  border-radius: 16px;
-  height: 50px;
+  border-radius: 1rem;
+  height: 3.125rem;
   border: 1px solid;
   display: flex;
   align-items: center;
@@ -572,7 +558,7 @@ input.check-toggle-round-flat:checked + label:after {
   cursor: pointer;
 }
 .card-section-4 .btn > iconify-icon {
-  font-size: 20px;
+  font-size: 1.25rem;
   color: var(--primary);
 }
 .card-section-4 .btn > .texts {
@@ -580,8 +566,8 @@ input.check-toggle-round-flat:checked + label:after {
   color: var(--primary);
   font-family: "inter", sans-serif;
   font-weight: 700;
-  font-size: 16px;
-  margin-left: 8px;
+  font-size: 1rem;
+  margin-left: 0.5rem;
 }
 .slider {
   display: flex;
@@ -596,15 +582,15 @@ input.check-toggle-round-flat:checked + label:after {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 30px;
+  font-size: 1.875rem;
   margin-right: 1rem;
-  width: 145px;
-  height: 60px;
-  left: 762px;
-  top: 314px;
+  width: 9.0625rem;
+  height: 3.75rem;
+  left: 47.625rem;
+  top: 19.5rem;
   background: #ffffff;
   color: black;
-  border-radius: 16px;
+  border-radius: 1rem;
 }
 @keyframes load {
   0% {
@@ -625,30 +611,44 @@ input.check-toggle-round-flat:checked + label:after {
   }
 }
 @media (max-width: 1200px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media (max-width: 1440px) {
+  html {
+    font-size: 14px;
+  }
 }
 @media (max-width: 1000px) {
+  html {
+    font-size: 10px;
+  }
+  .left {
+    min-width: 300px;
+  }
+  .left-container {
+    width: 100%;
+    max-width: 380px;
+  }
   .section {
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 2rem;
   }
   .right {
-    display: flex;
     width: 100%;
     justify-content: center;
-    margin-top: 40px;
+    align-items: center;
   }
   .card {
-    height: 100%;
-    min-height: 600px;
+    margin-left: 3rem;
   }
-  .card-button {
-    justify-self: flex-end;
-  }
-  .card-sections {
-    width: 100%;
-    padding-top: 30px;
-    height: 500px;
-  }
-  body {
-    overflow-y: visible;
+}
+
+@media (max-width: 800px) {
+  html {
+    font-size: 8px;
   }
 }
