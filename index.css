@@ -22,6 +22,7 @@ body {
   overflow-x: hidden;
   background-color: var(--violet);
   cursor: default;
+  transition: all 0.3s;
 }
 .main {
   width: 100%;
