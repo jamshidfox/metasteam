@@ -189,7 +189,6 @@ input.check-toggle-round-flat:checked + label:after {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0px 120px;
 }
 .right {
   display: flex;
@@ -197,7 +196,6 @@ input.check-toggle-round-flat:checked + label:after {
   justify-content: flex-start;
   align-items: center;
   width: 50%;
-  padding-right: 80px;
   height: 100%;
 }
 .left-numbers {
@@ -236,6 +234,7 @@ input.check-toggle-round-flat:checked + label:after {
 }
 .left-container {
   width: 80%;
+  max-width: 480px;
 }
 .left-container > #p {
   font-family: "inter", sans-serif;
@@ -277,7 +276,8 @@ input.check-toggle-round-flat:checked + label:after {
 }
 .card {
   width: 70%;
-  height: calc(80% - 60px);
+  min-height: 540px;
+  height: calc(85% - 60px);
   background: var(--card-blur-primary);
   backdrop-filter: blur(15px);
   /* Note: backdrop-filter has minimal browser support */
@@ -289,6 +289,7 @@ input.check-toggle-round-flat:checked + label:after {
   display: flex;
   width: 100%;
   align-items: center;
+  height: 10%;
 }
 .card-header > iconify-icon {
   color: var(--primary);
@@ -303,8 +304,7 @@ input.check-toggle-round-flat:checked + label:after {
 .card-sections {
   width: 100%;
   /* height: 500px;d */
-  padding-top: 30px;
-  height: calc(100%);
+  height: calc(90%);
 }
 .card-section-1 {
   opacity: 1;
@@ -431,7 +431,7 @@ input.check-toggle-round-flat:checked + label:after {
 }
 .card-section-2 {
   position: relative;
-  height: calc(100%);
+  height: 100%;
   /* display: none; */
   display: flex;
   align-items: center;
@@ -606,9 +606,6 @@ input.check-toggle-round-flat:checked + label:after {
   }
 }
 @media (max-width: 1200px) {
-  .right {
-    transform: scale(0.8);
-  }
 }
 @media (max-width: 1000px) {
   .section {
