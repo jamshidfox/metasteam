@@ -8,6 +8,8 @@ const dropdownLang = document.getElementById("hide-show");
 const faderInput = document.getElementById("fader");
 const faderLabel = document.getElementsByClassName("fader-label");
 const commisionLabel = document.getElementById("commision-price");
+const popup = document.getElementById("popup");
+const infoIcon = document.getElementById("info");
 const body = document.querySelector("body");
 
 //functionality
@@ -102,4 +104,16 @@ faderInput.addEventListener("change", (e) => {
     x.innerHTML = result + "£";
   }
   commisionLabel.innerHTML = commision + "£";
+});
+
+infoIcon.addEventListener("click", () => {
+  const styleDiv = popup.style;
+  console.log(styleDiv.display);
+  if (styleDiv.display == "none" || styleDiv.display == "") {
+    styleDiv.display = "flex";
+    styleDiv.opacity = 1;
+  } else {
+    styleDiv.display = "none";
+    styleDiv.opacity = "0";
+  }
 });

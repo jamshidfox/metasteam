@@ -22,19 +22,6 @@
           META<span class="steam-text">STEAM</span>
         </div>
         <div class="nav-controls">
-          <!-- <dropdown>
-            <input id="toggle2" type="checkbox" />
-            <label for="toggle2" class="animate theme-text"
-              >Русский<iconify-icon
-                id="down"
-                icon="material-symbols:chevron-left"
-                rotate="270deg"
-              ></iconify-icon
-            ></label>
-            <ul class="animate">
-              <li class="animate theme-text">English</li>
-            </ul>
-          </dropdown> -->
           <div class="dropdown">
             <div class="text" id="dropdown-value">
               <div id="lang-change">Русский</div>
@@ -104,14 +91,27 @@
                     placeholder="Логин Steam"
                     class="login-steam animate"
                   />
-                  <iconify-icon
-                    icon="material-symbols:info"
-                    class="animate theme-text"
-                  ></iconify-icon>
+
+                  <div class="tooltip">
+                    <iconify-icon
+                      id="info"
+                      icon="material-symbols:info"
+                      class="animate theme-text"
+                    ></iconify-icon>
+                    <div class="top animate theme-text" id="popup">
+                      <p>
+                        Lorem Ipsum Dolor sit amet, consectetur adipiscing elit.
+                      </p>
+                      <i></i>
+                    </div>
+                  </div>
                 </form>
-                <div>
+                <div class="slider-numbers-container">
                   <div class="slider">
-                    <label for="fader" class="fader-label" id="fader-label"
+                    <label
+                      for="fader"
+                      class="fader-label theme-text animate login-steam"
+                      id="fader-label"
                       >250£</label
                     >
                     <input
@@ -120,7 +120,7 @@
                       max="500"
                       value="250"
                       id="fader"
-                      step="6"
+                      step="20"
                       list="volsettings"
                     />
                     <datalist id="volsettings">
@@ -131,6 +131,11 @@
                       <option>450</option>
                       <option>500</option>
                     </datalist>
+                  </div>
+                  <div class="slider-numbers">
+                    <div class="slider-number1">250</div>
+                    <div class="slider-number2">350</div>
+                    <div class="slider-number3">450</div>
                   </div>
                 </div>
                 <div class="card-section-1-time">
@@ -154,7 +159,9 @@
                     <div class="sum animate theme-text">
                       Сумма с учетом комиссии
                     </div>
-                    <div class="price theme-text animate" id="commision-price">121 ₽</div>
+                    <div class="price theme-text animate" id="commision-price">
+                      121 ₽
+                    </div>
                   </div>
                 </div>
                 <div class="submit">
