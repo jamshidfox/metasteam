@@ -720,6 +720,11 @@ input.check-toggle-round-flat:checked + label:after {
 }
 
 @media (max-width: 550px) {
+  html,
+  body {
+    overflow-x: hidden !important;
+    position: relative;
+  }
   .nav {
     padding: 1rem 2rem;
     width: calc(100% - 4rem);
