@@ -722,7 +722,7 @@ input.check-toggle-round-flat:checked + label:after {
 @media (max-width: 550px) {
   html,
   body {
-    overflow-x: hidden !important;
+    overflow: hidden !important;
     position: relative;
   }
   .nav {
