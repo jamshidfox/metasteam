@@ -10,6 +10,7 @@ const faderLabel = document.getElementsByClassName("fader-label");
 const commisionLabel = document.getElementById("commision-price");
 const popup = document.getElementById("popup");
 const infoIcon = document.getElementById("info");
+const resultSum = document.getElementById("result-sum");
 const body = document.querySelector("body");
 const r = document.querySelector(":root");
 //functionality
@@ -66,6 +67,7 @@ topUp.addEventListener("click", () => {
   firstCard.style.display = "none";
   secondCard.style.display = "flex";
   secondCard.style.opacity = 1;
+
   setTimeout(() => {
     secondCard.style.opacity = 0;
     secondCard.style.display = "none";
@@ -102,6 +104,7 @@ faderInput.addEventListener("change", (e) => {
     x.innerHTML = result + "₽";
   }
   commisionLabel.innerHTML = commision + "₽";
+  resultSum.innerHTML = commision + "₽";
 });
 
 infoIcon.addEventListener("click", () => {
