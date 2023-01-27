@@ -588,9 +588,9 @@ input.check-toggle-round-flat:checked + label:after {
 }
 .slider {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   margin-top: 1rem;
-  height: 3rem;
+  /* height: 3rem; */
 }
 .slider-numbers-container {
   display: flex;
@@ -601,8 +601,9 @@ input.check-toggle-round-flat:checked + label:after {
   position: relative;
   align-self: flex-end;
   left: -0.1rem;
+  justify-content: space-between;
   top: -1rem;
-  width: calc(100% - 7rem);
+  width: calc(100% - 7.8rem);
 }
 .slider-number1 {
   position: relative;
@@ -618,6 +619,7 @@ input.check-toggle-round-flat:checked + label:after {
 }
 #fader {
   width: 100%;
+  padding: 0;
 }
 #fader-label {
   display: flex;
@@ -633,6 +635,73 @@ input.check-toggle-round-flat:checked + label:after {
   color: white;
   border-radius: 1rem;
 }
+/********** Range Input Styles **********/
+/*Range Reset*/
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* Removes default focus */
+input[type="range"]:focus {
+  outline: none;
+}
+
+/***** Chrome, Safari, Opera and Edge Chromium styles *****/
+/* slider track */
+input[type="range"]::-webkit-slider-runnable-track {
+  background-color: var(--blue);
+  border-radius: 0.5rem;
+  height: 0.4rem;
+}
+
+/* slider thumb */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  margin-top: -0.3rem; /* Centers thumb on the track */
+
+  /*custom styles*/
+  background-color: var(--blue);
+  border: 1px solid white;
+  border-radius: 0.5rem;
+  height: 1rem;
+  width: 1rem;
+}
+
+input[type="range"]:focus::-webkit-slider-thumb {
+  border: 1px solid white;
+  outline: none;
+  outline-offset: 0.125rem;
+}
+
+/******** Firefox styles ********/
+/* slider track */
+input[type="range"]::-moz-range-track {
+  background-color: var(--blue);
+  border-radius: 0.5rem;
+  height: 0.5rem;
+}
+
+/* slider thumb */
+input[type="range"]::-moz-range-thumb {
+  border: none; /*Removes extra border that FF applies*/
+  border-radius: 0; /*Removes default border-radius that FF applies*/
+
+  /*custom styles*/
+  background-color: var(--blue);
+  height: 1rem;
+  width: 1rem;
+}
+
+input[type="range"]:focus::-moz-range-thumb {
+  border: 1px solid white;
+  outline: none;
+  outline-offset: 0.125rem;
+}
+
 @keyframes load {
   0% {
     transform: rotate(0deg);
@@ -717,6 +786,9 @@ input.check-toggle-round-flat:checked + label:after {
   .section {
     justify-content: flex-start;
   }
+  #info {
+    font-size: 1.5rem;
+  }
 }
 
 @media (max-width: 550px) {
@@ -734,7 +806,7 @@ input.check-toggle-round-flat:checked + label:after {
   }
   .section {
     padding: 0;
-    padding-left: 2rem;
+    align-items: center;
   }
   .slider-number2 {
     left: 35%;
@@ -742,11 +814,8 @@ input.check-toggle-round-flat:checked + label:after {
   .slider-number3 {
     left: 62%;
   }
-  .section {
-    align-items: flex-start;
-  }
   .right {
-    align-items: flex-start;
+    align-items: center;
   }
 }
 @media (max-width: 420px) {
