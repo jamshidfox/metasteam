@@ -122,7 +122,6 @@ faderLabel[0].addEventListener("change", (e) => {
 
 infoIcon.addEventListener("click", () => {
   const styleDiv = popup.style;
-  console.log(styleDiv.display);
   if (styleDiv.display == "none" || styleDiv.display == "") {
     styleDiv.display = "flex";
     styleDiv.opacity = 1;
