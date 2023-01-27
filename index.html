@@ -108,12 +108,16 @@
                 </form>
                 <div class="slider-numbers-container">
                   <div class="slider">
-                    <label
+                    <input
                       for="fader"
                       class="fader-label theme-text animate login-steam"
                       id="fader-label"
-                      >250₽</label
-                    >
+                      value="250"
+                      type="number"
+                      min="250"
+                      max="450"
+                    />
+                    <div class="currenct-sign animate theme-text">₽</div>
                     <input
                       type="range"
                       min="250"
@@ -152,7 +156,10 @@
                 <div class="check-text-prices">
                   <div class="check-text-prices-left">
                     <div class="sum animate theme-text">Сумма</div>
-                    <div class="price theme-text animate fader-label">
+                    <div
+                      class="price theme-text animate fader-label"
+                      id="commision-price-1"
+                    >
                       250 ₽
                     </div>
                   </div>
@@ -160,7 +167,10 @@
                     <div class="sum animate theme-text">
                       Сумма с учетом комиссии
                     </div>
-                    <div class="price theme-text animate" id="commision-price">
+                    <div
+                      class="price theme-text animate"
+                      id="commision-price-2"
+                    >
                       270 ₽
                     </div>
                   </div>

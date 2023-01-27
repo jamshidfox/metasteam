@@ -7,7 +7,8 @@ const dropdownValue = document.getElementById("lang-change");
 const dropdownLang = document.getElementById("hide-show");
 const faderInput = document.getElementById("fader");
 const faderLabel = document.getElementsByClassName("fader-label");
-const commisionLabel = document.getElementById("commision-price");
+const commisionLabel1 = document.getElementById("commision-price-1");
+const commisionLabel2 = document.getElementById("commision-price-2");
 const popup = document.getElementById("popup");
 const infoIcon = document.getElementById("info");
 const resultSum = document.getElementById("result-sum");
@@ -35,6 +36,7 @@ toggle.addEventListener("click", () => {
     backToFirstBtn.style.border = "1px solid white";
     for (let input of loginSteamInput) {
       input.style.background = dark.section.card.input;
+      input.style.color = dark.color;
     }
     for (let text of cardThemeTexts) {
       text.style.color = dark.section.color;
@@ -53,6 +55,7 @@ toggle.addEventListener("click", () => {
 
     for (let input of loginSteamInput) {
       input.style.background = light.section.card.input;
+      input.style.color = light.color;
     }
     for (let text of cardThemeTexts) {
       text.style.color = light.section.color;
@@ -103,7 +106,17 @@ faderInput.addEventListener("change", (e) => {
   for (let x of faderLabel) {
     x.innerHTML = result + "₽";
   }
-  commisionLabel.innerHTML = commision + "₽";
+  commisionLabel1.innerHTML = result + "₽";
+  commisionLabel2.innerHTML = commision + "₽";
+  faderLabel[0].value = result;
+  resultSum.innerHTML = commision + "₽";
+});
+faderLabel[0].addEventListener("change", (e) => {
+  const result = e.target.value;
+  const commision = +result + 20;
+  faderInput.value = result;
+  commisionLabel1.innerHTML = result + "₽";
+  commisionLabel2.innerHTML = commision + "₽";
   resultSum.innerHTML = commision + "₽";
 });
 
