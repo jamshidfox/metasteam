@@ -302,6 +302,16 @@ input.check-toggle-round-flat:checked + label:after {
   height: 100%;
   animation: in 1s;
 }
+.fader-label ::-webkit-outer-spin-button,
+::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.fader-label {
+  -moz-appearance: textfield;
+}
 .card-section-1 input {
   padding: 1.125rem 2rem;
   border-radius: 1rem;
@@ -309,7 +319,7 @@ input.check-toggle-round-flat:checked + label:after {
   font-family: "inter", sans-serif;
   color: var(--primary);
   background-color: var(--secondary);
-  font-weight: 700;
+  font-weight: 400;
   width: 80%;
 }
 .card-section-1 form {
@@ -485,6 +495,7 @@ input.check-toggle-round-flat:checked + label:after {
   font-size: 1.75rem;
   line-height: 2.25rem;
   text-align: center;
+  color: white;
 }
 .copy-icon {
   display: flex;
@@ -603,7 +614,7 @@ input.check-toggle-round-flat:checked + label:after {
   left: -0.1rem;
   justify-content: space-between;
   top: -1rem;
-  width: calc(100% - 7.8rem);
+  width: calc(100% - 7.6rem);
 }
 .slider-number1 {
   position: relative;
@@ -621,19 +632,34 @@ input.check-toggle-round-flat:checked + label:after {
   width: 100%;
   padding: 0;
 }
+.currenct-sign {
+  position: absolute;
+  font-size: 1.875rem;
+  font-family: "inter", sans-serif;
+  font-weight: 400;
+  left: 4.8rem;
+}
 #fader-label {
+  padding: 0rem;
+  padding-left: 0.9rem;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.875rem;
+  font-family: "inter", sans-serif;
+  font-weight: 400;
   margin-right: 1rem;
-  width: 9.0625rem;
+  width: 6.0625rem;
   height: 3.75rem;
-  left: 47.625rem;
-  top: 19.5rem;
   background: var(--secondary);
   color: white;
   border-radius: 1rem;
+}
+#fader-label:focus {
+  outline: none;
+}
+.login-steam {
+  color: var(--primary);
 }
 /********** Range Input Styles **********/
 /*Range Reset*/
@@ -803,6 +829,7 @@ input[type="range"]:focus::-moz-range-thumb {
   }
   .card {
     margin: 0;
+    width: 80%;
   }
   .section {
     padding: 0;
