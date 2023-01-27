@@ -115,6 +115,9 @@
                       type="number"
                       min="250"
                       max="450"
+                      oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                      type="number"
+                      maxlength="3"
                     />
                     <div class="currenct-sign animate theme-text">₽</div>
                     <input
