@@ -11,9 +11,11 @@ const commisionLabel1 = document.getElementById("commision-price-1");
 const commisionLabel2 = document.getElementById("commision-price-2");
 const popup = document.getElementById("popup");
 const infoIcon = document.getElementById("info");
+const mailSteam = document.getElementById("email-steam");
 const resultSum = document.getElementById("result-sum");
 const body = document.querySelector("body");
 const r = document.querySelector(":root");
+const data = {};
 //functionality
 const firstCard = document.getElementsByClassName("card-section-1")[0];
 const secondCard = document.getElementsByClassName("card-section-2")[0];
@@ -31,6 +33,7 @@ toggle.addEventListener("click", () => {
     toggle.id = "darkLabel";
     //***************
     // r.style.setProperty("--primary", "white");
+    // r.style.setProperty("--secondary", dark.section.color);
     //Section
     card.style.background = dark.section.card.backgroundColor;
     backToFirstBtn.style.border = "1px solid white";
@@ -47,7 +50,8 @@ toggle.addEventListener("click", () => {
     body.style.backgroundColor = light.backgroundColor;
     toggle.id = "whiteLabel";
     //***************
-    // r.style.setProperty("--primary", "#1f2024");
+    // r.style.setProperty("--primary", dark.section.color);
+    // r.style.setProperty("--secondary", "white");
     //Section
 
     card.style.background = light.section.card.backgroundColor;
@@ -77,6 +81,9 @@ topUp.addEventListener("click", () => {
     thirdCard.style.display = "flex";
     thirdCard.style.opacity = 1;
   }, 3000);
+  data.account = mailSteam.value;
+  data.amount = resultSum.innerHTML;
+  console.log(data);
 });
 confirmationButton[0].addEventListener("click", () => {
   setTimeout(() => {

@@ -87,9 +87,10 @@
               <div class="card-section-1">
                 <form class="login-steam animate">
                   <input
-                    type="text"
+                    type="email"
                     placeholder="Логин Steam"
                     class="login-steam animate"
+                    id="email-steam"
                   />
 
                   <div class="tooltip">
@@ -113,13 +114,10 @@
                       id="fader-label"
                       value="250"
                       type="number"
-                      min="250"
-                      max="450"
-                      oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                       type="number"
                       maxlength="3"
                     />
-                    <div class="currenct-sign animate theme-text">₽</div>
+                    <div class="animate theme-text" id="currenct-sign">₽</div>
                     <input
                       type="range"
                       min="250"
