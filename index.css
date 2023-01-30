@@ -19,7 +19,7 @@ body {
   background: url("images/background.png"), rgba(38, 33, 57, 0.2);
   background-repeat: no-repeat;
   background-size: cover;
-  overflow-x: hidden;
+  overflow: hidden;
   background-color: var(--violet);
   cursor: default;
   transition: all 0.3s;
@@ -605,6 +605,7 @@ input.check-toggle-round-flat:checked + label:after {
   display: flex;
   align-items: center;
   margin-top: 1rem;
+  justify-content: space-between;
   /* height: 3rem; */
 }
 .slider-numbers-container {
@@ -617,7 +618,7 @@ input.check-toggle-round-flat:checked + label:after {
   align-self: flex-end;
   left: -0.1rem;
   justify-content: space-between;
-  top: -1rem;
+  top: -0.8rem;
   width: calc(100% - 7.6rem);
 }
 .slider-number1 {
@@ -633,19 +634,27 @@ input.check-toggle-round-flat:checked + label:after {
   left: 59%;
 }
 #fader {
-  width: 100%;
+  width: 77%;
   padding: 0;
 }
-.currenct-sign {
+#currenct-sign {
   position: absolute;
+  height: 3.75rem;
   font-size: 1.875rem;
   font-family: "inter", sans-serif;
   font-weight: 400;
   left: 4.8rem;
+  background-color: var(--secondary);
+  color: var(--primary);
+  border-bottom-right-radius: 1rem;
+  border-top-right-radius: 1rem;
+  display: flex;
+  align-items: center;
+  width: 1.6rem;
 }
 #fader-label {
   padding: 0rem;
-  padding-left: 0.9rem;
+  padding-right: 0.6rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -653,12 +662,15 @@ input.check-toggle-round-flat:checked + label:after {
   font-family: "inter", sans-serif;
   font-weight: 400;
   margin-right: 1rem;
-  width: 7.4625rem;
-  min-width: 55px;
+  width: 4.4625rem;
+  min-width: 40px;
   height: 3.75rem;
   background: var(--secondary);
   color: white;
+  text-align: right;
   border-radius: 1rem;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
 #fader-label:focus {
   outline: none;
@@ -685,21 +697,21 @@ input[type="range"]:focus {
 input[type="range"]::-webkit-slider-runnable-track {
   background-color: var(--blue);
   border-radius: 0.5rem;
-  height: 0.4rem;
+  height: 0.8rem;
 }
 
 /* slider thumb */
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none; /* Override default look */
   appearance: none;
-  margin-top: -0.3rem; /* Centers thumb on the track */
+  margin-top: -0.5rem; /* Centers thumb on the track */
 
   /*custom styles*/
   background-color: var(--blue);
   border: 1px solid white;
-  border-radius: 0.5rem;
-  height: 1rem;
-  width: 1rem;
+  border-radius: 0.9rem;
+  height: 1.8rem;
+  width: 1.8rem;
 }
 
 input[type="range"]:focus::-webkit-slider-thumb {
