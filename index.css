@@ -605,7 +605,7 @@ input.check-toggle-round-flat:checked + label:after {
   display: flex;
   align-items: center;
   margin-top: 1rem;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   /* height: 3rem; */
 }
 .slider-numbers-container {
@@ -614,12 +614,9 @@ input.check-toggle-round-flat:checked + label:after {
 }
 .slider-numbers {
   display: flex;
-  position: relative;
   align-self: flex-end;
-  left: -0.1rem;
   justify-content: space-between;
-  top: -0.8rem;
-  width: calc(100% - 7.6rem);
+  width: calc(100%);
 }
 .slider-number1 {
   position: relative;
@@ -633,17 +630,21 @@ input.check-toggle-round-flat:checked + label:after {
   position: relative;
   left: 59%;
 }
+.fader-right {
+  display: flex;
+  flex-direction: column;
+  width: calc(100%);
+  margin-left: 1rem;
+}
 #fader {
-  width: 77%;
+  width: 100%;
   padding: 0;
 }
 #currenct-sign {
-  position: absolute;
   height: 3.75rem;
   font-size: 1.875rem;
   font-family: "inter", sans-serif;
   font-weight: 700;
-  left: 4.8rem;
   background-color: var(--secondary);
   color: var(--primary);
   border-bottom-right-radius: 1rem;
@@ -654,15 +655,14 @@ input.check-toggle-round-flat:checked + label:after {
 }
 #fader-label {
   padding: 0rem;
-  padding-right: 0.6rem;
+  padding-right: 0.4rem;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.875rem;
   font-family: "inter", sans-serif;
   font-weight: 700;
-  margin-right: 1rem;
-  width: 4.4625rem;
+  width: 8.4625rem;
   min-width: 40px;
   height: 3.75rem;
   background: var(--secondary);
