@@ -10,6 +10,7 @@ const faderLabel = document.getElementsByClassName("fader-label");
 const commisionLabel1 = document.getElementById("commision-price-1");
 const commisionLabel2 = document.getElementById("commision-price-2");
 const popup = document.getElementById("popup");
+const currencySign = document.getElementById("currenct-sign");
 const infoIcon = document.getElementById("info");
 const mailSteam = document.getElementById("email-steam");
 const resultSum = document.getElementById("result-sum");
@@ -35,6 +36,8 @@ toggle.addEventListener("click", () => {
     // r.style.setProperty("--primary", "white");
     // r.style.setProperty("--secondary", dark.section.color);
     //Section
+    currencySign.style.backgroundColor = dark.section.card.input;
+    currencySign.style.color = dark.color;
     card.style.background = dark.section.card.backgroundColor;
     backToFirstBtn.style.border = "1px solid white";
     for (let input of loginSteamInput) {
@@ -53,7 +56,8 @@ toggle.addEventListener("click", () => {
     // r.style.setProperty("--primary", dark.section.color);
     // r.style.setProperty("--secondary", "white");
     //Section
-
+    currencySign.style.backgroundColor = light.section.card.input;
+    currencySign.style.color = light.color;
     card.style.background = light.section.card.backgroundColor;
     backToFirstBtn.style.border = "1px solid black";
 
